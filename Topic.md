@@ -2,34 +2,47 @@
 
 >   This Query used in PostgreSQL to list the names of all databases currently available on the server.
 
-``` SELECT datname FROM pg_database; ```
+```bash
+ SELECT datname FROM pg_database; 
+ ```
 
 # CREATE DATABASE
 
-``` CREATE DATABASE DATABASENAME; ```
+``` bash 
+CREATE DATABASE DATABASENAME; 
+```
 # CONNECT TO DATABASE
 
-1. IN terminal ``` \c DATABASENAME; ```
+1. IN terminal 
+```bash
+ \c DATABASENAME; 
+ ```
 
 # DELET DATABASE 
 
 * first disconnect database
-``` DROP DATABASE DATABASENAME; ```
+``` bash
+ DROP DATABASE DATABASENAME; 
+ ```
 
 # CREATE TABLE
 
-<pre> ``` CREATE TABlE person (
+```bash
+ CREATE TABlE person (
 id INT,
 name VARCHAR(225),
 city VARCHAR(225)
-); ``` </pre>
+); 
+``` 
 
 > check if the table with name <bold> person</bold> created or not?
-<pre>```\d person``` </pre>
+```bash
+\d person
+``` 
 
 # INSERTING DATA IN TABLE 
 - **INSERT QUERY** - 
-<pre>``` 
+```bash 
 INSERT INTO person(id,name,city )
 VALUES (101,'dashrath','ahmedabad' );
-```</pre>
+```
