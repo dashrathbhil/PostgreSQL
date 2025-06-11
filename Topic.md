@@ -46,3 +46,8 @@ city VARCHAR(225)
 INSERT INTO person(id,name,city )
 VALUES (101,'dashrath','ahmedabad' );
 ```
+- **INSERT Multiple data**-
+```bash
+INSERT INTO person(id,name,city)
+VALUES (102,'raju','surat'),(103,'jay','jamanagar')
+```
