@@ -51,3 +51,44 @@ VALUES (101,'dashrath','ahmedabad' );
 INSERT INTO person(id,name,city)
 VALUES (102,'raju','surat'),(103,'jay','jamanagar')
 ```
+- **INSERT Without field** -
+``` bash 
+INSERT INTO person
+VALUES (104,'alex','ahmedabad');
+```
+- **READING DATA FROM TABLE -** 
+``` bash
+SELECT * FROM person;
+SELECT <column_name> from person;
+SELECT name from person;
+SELECT city from person;
+SELECT name,city from person;
+
+```
+- **MODIFY/UPDATING DATA FROM TABLE -**
+1. 
+``` bash
+UPDATE person
+SET city = 'banglore'
+WHERE name = 'raju';
+```
+2. 
+``` bash
+UPDATE person
+SET city = 'banglore'
+WHERE id = '102';
+```
+-**DELET DATA FROM TABLE -**
+```bash
+DELETE FROM person
+WHERE name = 'alex';
+```
+```bash
+DELETE FROM person
+WHERE id = 102;
+```
+
+-**AVOID NULL OR DUBLICATE ID IN  TABLE -**
+```bash
+
+```
