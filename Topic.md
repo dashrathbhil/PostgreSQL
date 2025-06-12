@@ -206,4 +206,16 @@ SELECT * from staff WHERE salary >= 50000;
 ```bash
  SELECT  * from staff  where dept='HR' or dept='IT';
  ```
- 
+ ## IN OPERATOR
+ >instead of using this 
+ ``` bash 
+ SELECT * FROM employees 
+WHERE dept = 'IT'
+OR dept = 'HR'
+OR dept = 'Finance';
+```
+>use this 
+```bash
+SELECT * FROM employees 
+WHERE dept IN ('IT', 'HR', 'Finance');
+```
