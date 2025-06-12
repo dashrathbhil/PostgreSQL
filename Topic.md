@@ -209,13 +209,112 @@ SELECT * from staff WHERE salary >= 50000;
  ## IN OPERATOR
  >instead of using this 
  ``` bash 
- SELECT * FROM employees 
+ SELECT * FROM staff 
 WHERE dept = 'IT'
 OR dept = 'HR'
 OR dept = 'Finance';
 ```
 >use this 
 ```bash
-SELECT * FROM employees 
+SELECT * FROM staff 
 WHERE dept IN ('IT', 'HR', 'Finance');
 ```
+## BETWEEN OPERATOR
+```bash 
+SELECT * FROM staff 
+WHERE 
+salary BETWEEN 40000 AND 65000
+```
+
+## DISTINCT
+> get unique value
+```bash
+SELECT DISTINCT dept FROM staff;
+```
+## ORDER BY
+> for sorting  data
+```bash
+SELECT * FROM staff ORDER BY fname;
+```
+SELECT * FROM staff ORDER BY fname DESC ;
+## LIMIT
+```bash
+SELECT * FROM staff LIMIT 3;
+```
+## LIKE
+```bash
+Select * FROM staff   WHERE fname LIKE 'A%'
+```
+```bash
+Select * FROM staff   WHERE fname LIKE '%a'
+```
+```bash
+Select * FROM staff   WHERE fname LIKE '%i%'
+```
+```bash
+Select * FROM staff   WHERE dept LIKE '__'
+```
+
+## Aggregate Functions
+- ** **
+
+- **COUNT**
+- **SUM**
+- **AVG**
+- **MIN**
+- **MAX**
+
+# COUNT
+```bash
+SELECT COUNT(emp_id) FROM staff;
+
+```
+```bash
+SELECT COUNT(fname) FROM staff;
+
+```
+# SUM
+```bash
+SELECT SUM(salary) FROM staff;
+```
+# AVG
+```bash
+SELECT AVG(salary) FROM staff
+```
+# MIN
+```bash
+SELECT MIN(salary) FROM staff
+```
+# MAX
+```bash
+SELECT MAX(salary) FROM staff
+```
+
+### What is GROUP BY
+ No.of employees in each department.
+
+ ```bash
+SELECT dept FROM staff GROUP BY dept;
+ ```
+ ```bash
+SELECT dept, COUNT(fname) FROM staff GROUP BY dept;
+ ```
+ ```bash
+SELECT dept, SUM(salary) FROM staff GROUP BY dept;
+ ```
+ ```bash
+ SELECT DISTINCT ON (dept)
+  dept, fname, lname, salary
+FROM staff
+ORDER BY dept, salary DESC;
+ ```
+### String Function
+>In SQL, string functions are used to manipulate or analyze text data (i.e., strings). These functions help you clean, modify, or extract useful information from columns with text values.
+- **CONCAT, CONCAT_WS**
+- **SUBSTR**
+- **LEFT, RIGHT**
+- **UPPER, LOWER**
+- **TRIM, LTRIM, RTRIM**
+- **REPLACE**
+- **POSITION**
+
